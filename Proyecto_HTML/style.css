@@ -3,9 +3,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
     font-family: 'Nunito', sans-serif;
-    font-size: 20px;
 }
 
 html {
@@ -14,11 +12,10 @@ html {
 }
 
 body {
-   
 
     margin: 0%;
     margin-bottom: 0%;
-
+    
 }
 
 
@@ -29,10 +26,14 @@ body {
     background-color: #1b3039;
     height: 85px;
     padding: 5px 0%;
-
+    width: 100%;
 
 }
 
+.contenedor-nav{
+max-width: 992px;
+
+}
 .header .nav-links {
     list-style: none;
 
@@ -68,7 +69,6 @@ body {
     height: 180px;
     color: white;
     display: flex;
-
     align-items: center;
     justify-content: center;
 }
@@ -90,7 +90,7 @@ body {
     border-radius: 5%;
     display: inline-flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content:space-around;
     align-items: center;
     transition: all .5s ease;
     transform: translateX(0%);
@@ -104,7 +104,7 @@ body {
     padding: 0;
     max-width: 100%;
     /*max-height: 14em;*/
-    height: 23em;
+    height: 30em;
     object-fit: fill;
     box-shadow: 7px 7px 14px #c5ced8;
     border-radius: 0.5%;
@@ -138,13 +138,16 @@ body {
 
 }
 
-
-
-
+.Informacion-container{
+ padding-bottom: 50px;
+}
 .Informacion-content {
-   
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     margin-top: 30px;
+    
 
 }
 
@@ -165,6 +168,8 @@ body {
     align-items: center;
     flex-wrap: nowrap;
     padding-top: 5px;
+    
+    
  }
  
 .Informacion-1 .Informacion-c1 {
@@ -248,68 +253,73 @@ body {
 
     
 
-
 .Informacion-3{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-wrap: nowrap;
-    padding-top: 5px;
-    padding-bottom: 5%;
-
-}
-.Informacion-3 .Informacion-c3{
-    display: flex;
-    justify-content: center;
-
-}
-.Informacion-3 .Informacion-a3{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 100%;
-
+    height:fit-content;
     
+    gap:20px;
 
 }
-.Informacion-3 .card-container{
-    display:flex ;
-    width: 100%;
+.Informacion-3 .container{
+    width:100%;
+    height:fit-content;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    
+    gap: 20px;
+
+}
+.Informacion-3 .card{
+    height: 400px;
+    width: 30%;
+    position: relative;
+    transition: all 1s linear;
+  
+    transform-style: preserve-3d;
+}
+
+ .Informacion-3 .card  .front, .back{
     height: 100%;
-    max-height: 100%;
-    gap: 10px;
-}
-.Informacion-3 .card-image{
-   
-   margin: 20px;
-   border-radius: 6px;
-
-   
-
-}
-.Informacion-3 .card-containermini{
-    
+    width: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    justify-content: center;
     align-items: center;
-    
-    overflow: hidden;
-    background: #fff;
+    border-radius: 10px;
+    background-color: #fff59d;
+    position: absolute;
+ }
+ .Informacion-3 .card .front{
+    z-index:2;
+    backface-visibility: hidden;
+ }
+ .Informacion-3 .card .back{
+    z-index: 1;
+    transform: rotateY(180deg);
+ }
+ .card:hover {
+    transform: rotateY(180deg);
 
+ }
+.Informacion-3 .card .front img {
     width: 100%;
-    height: 800px;
-    
-    box-shadow: 0px  1px 10px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    border-radius: 10px;
 
-    
 }
+.Informacion-3 .container .card .back{
+    text-align: center;
+
+}
+
+
+
+
 .Informacion-3 .platillo1,.platillo2,.platillo3,.platillo4,.platillo5{
     width: 28vw;
     height: 28vh;
