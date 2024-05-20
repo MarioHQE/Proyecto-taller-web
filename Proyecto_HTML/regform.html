@@ -5,25 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="navstyle.css">
-    <link rel="stylesheet" href="regform.css">
+    <link rel="stylesheet" href="css/navstyle.css">
+    <link rel="stylesheet" href="css/regform.css">
     <script src="https://kit.fontawesome.com/41f828ffd0.js" crossorigin="anonymous"></script>
-
-    <script defer src="nav.js"></script>
-
+    <script defer src="js/nav.js"></script>
+    <script defer src="js/eyereg.js"></script>
 </head>
 
 <body>
     <header class="header">
         <nav class="nav">
             <a href="#" class="Logo nav-link">
-                <img src="Logo Diana.jpeg" alt="" srcset="">
+                <img src="img/Logo Diana.jpeg" alt="" srcset="">
             </a>
             <button class="nav-toggle">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <ul class="nav-menu ">
-                <li class="nav-menu-item"><a href="principal.html" class="nav-menu-link nav-link nav-menu-link_active">
+                <li class="nav-menu-item"><a href="index.html" class="nav-menu-link nav-link nav-menu-link_active">
                         Informacion
                     </a>
                 </li>
@@ -55,18 +54,18 @@
                     <i class="fa-solid fa-user"></i>
                 </div>
                 <div class="caja-input">
-                    <input type="password"   id="password-input" placeholder="contraseña" required> 
-                    <i class="fa-solid fa-lock"></i>
+                    <input type="password"   id="password-input2" placeholder="contraseña" required>
+                    <i class="fa-solid fa-eye" id="visualizar2"></i>
                 </div>
-                <div class="caja-input"> 
-                    <input type="password"  id="password-input" placeholder="Repetir contraseña" required>
-                   <i class="fa-solid fa-eye" id="visualizar" ></i>
+                <div class="caja-input">
+                    <input type="password" id="password-input" placeholder="Repetir contraseña" required>
+                    <i class="fa-solid fa-eye" id="visualizar"></i>
                 </div>
-                 
+
                 <div class="registro-btn">
-                              
+
                     <button type="submit" class="btn-register">Registrar </button>
-                 
+
                 </div>
 
 
@@ -74,22 +73,9 @@
             </form>
         </div>
     </div>
-    <script>
-        const visualizar = document.getElementById("visualizar");
-        const passwordInput = document.getElementById("password-input");
 
-        visualizar.addEventListener("click", () => {
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                visualizar.classList.remove("fa-eye");
-                visualizar.classList.add("fa-eye-slash");
-            } else {
-                passwordInput.type = "password";
-                visualizar.classList.remove("fa-eye-slash");
-                visualizar.classList.add("fa-eye");
-            }
-        });
-    </script>
+
+
 </body>
 
 </html>
